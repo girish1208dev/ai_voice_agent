@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Divyasree AI Voice Assistant — Premium real estate consultation powered by AI">
+  <title>Divyasree | AI Voice Consultant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header-inner">
+        <div class="logo" id="logo">
+          <div class="logo-icon">D</div>
+          <span class="logo-text">Divyasree</span>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero-section">
+        <p class="hero-subtitle" id="hero-subtitle">
+          Divyasree Consultant
+        </p>
+        <p class="hero-description" id="hero-description">
+          Call from our agent about Whispers of the Wind (WOW) project.
+        </p>
+      </section>
+
+      <!-- Call Interface -->
+      <section class="call-section" id="call-section">
+        <!-- Status Indicator -->
+        <div class="status-container" id="status-container">
+          <div class="status-ring" id="status-ring">
+            <div class="status-ring-inner" id="status-ring-inner">
+              <div class="status-icon" id="status-icon">
+                <!-- Mic icon (idle state) -->
+                <svg id="icon-mic" class="icon active" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="23" />
+                  <line x1="8" y1="23" x2="16" y2="23" />
+                </svg>
+                <!-- Waveform icon (listening state) -->
+                <svg id="icon-listening" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round">
+                  <line x1="4" y1="8" x2="4" y2="16" class="wave-bar bar-1" />
+                  <line x1="8" y1="5" x2="8" y2="19" class="wave-bar bar-2" />
+                  <line x1="12" y1="3" x2="12" y2="21" class="wave-bar bar-3" />
+                  <line x1="16" y1="5" x2="16" y2="19" class="wave-bar bar-4" />
+                  <line x1="20" y1="8" x2="20" y2="16" class="wave-bar bar-5" />
+                </svg>
+                <!-- Speaker icon (speaking state) -->
+                <svg id="icon-speaking" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" class="sound-wave wave-1" />
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" class="sound-wave wave-2" />
+                </svg>
+                <!-- Phone off icon (ended state) -->
+                <svg id="icon-ended" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.42 19.42 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91" />
+                  <line x1="23" y1="1" x2="1" y2="23" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p class="status-text" id="status-text"></p>
+        </div>
+
+        <!-- Call Button -->
+        <div class="call-button-container" id="call-button-container">
+          <button class="call-button" id="call-button" type="button" aria-label="Start Call">
+            <span class="call-button-icon" id="call-button-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </span>
+            <span class="call-button-text" id="call-button-text">Answer Call</span>
+          </button>
+        </div>
+
+        <!-- Call Timer -->
+        <div class="call-timer" id="call-timer">
+          <span class="timer-dot"></span>
+          <span class="timer-text" id="timer-text">00:00</span>
+        </div>
+      </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p>&copy; 2026 Divyasree. Real estate consultation.</p>
+    </footer>
+
+    <!-- Mic Permission Modal -->
+    <div class="modal-overlay" id="mic-modal" role="dialog" aria-modal="true" aria-labelledby="mic-modal-title">
+      <div class="modal-card" id="mic-modal-card">
+        <div class="modal-icon" id="mic-modal-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+            <line x1="12" y1="19" x2="12" y2="23" />
+            <line x1="8" y1="23" x2="16" y2="23" />
+          </svg>
+        </div>
+        <h3 class="modal-title" id="mic-modal-title">Microphone Access Required</h3>
+        <p class="modal-text" id="mic-modal-text">
+          To have a voice conversation with our AI consultant, we need access to your microphone.
+          Please allow microphone access when prompted by your browser.
+        </p>
+        <div class="modal-actions" id="mic-modal-actions">
+          <button class="modal-btn modal-btn-secondary" id="mic-modal-cancel" type="button">Cancel</button>
+          <button class="modal-btn modal-btn-primary" id="mic-modal-allow" type="button">Allow &amp; Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Toast -->
+    <div class="toast" id="error-toast" role="alert">
+      <div class="toast-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+      </div>
+      <p class="toast-message" id="toast-message">An error occurred</p>
+      <button class="toast-close" id="toast-close" type="button" aria-label="Dismiss">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
